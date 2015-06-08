@@ -1,0 +1,519 @@
+<body>
+  <div id="wrapper">
+    <div id="top-menu">
+      <div class="wrap">
+        <span class="left-contact">
+          <p><b>tư vấn bán hàng</b></p>
+          <p>0936.020.223</p>
+        </span>
+
+        <span class="right-contact">
+          <p><b>tổng đài CSKH</b></p>
+          <p>0936.020.223</p>
+        </span>
+
+        <ul>
+          <li><a href="#">trang chủ</a></li>
+          <li><a href="#">giới thiệu</a></li>
+          <li><a href="#">liên hệ</a></li>
+          <li><a href="#">tuyển dụng</a></li>
+          <li><a href="#">siêu thị</a></li>
+          <li style="margin-left: 30px;">
+            <% if current_user %>
+                 <%= current_user.email %>. <%= link_to 'Sign out', destroy_user_session_path, { method: "delete" } %>
+            <% else %>
+                <%= link_to 'đăng nhập/ đăng ký', user_session_path %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div><!-- End #top-menu -->
+
+    <div id="logo-search">
+      <div class="wrap">
+        <div class="logo"><%= link_to image_tag('logo.png') %></div>
+      </div>
+
+    </div> <!-- End #logo-search -->
+
+    <div id="main-menu">
+      <ul>
+        <li><a href="#">điện thoại</a></li>
+        <li><a href="#">máy tính bảng</a></li>
+        <li><a href="#">phụ kiện</a></li>
+        <li><a href="#">hàng secondhand</a></li>
+        <li><a href="#">đồng hồ thông minh</a></li>
+      </ul>
+    </div> <!-- End #main-menu -->
+
+    <div id="main-banner">
+      <div class="slider">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <%= image_tag 'slide1.jpg' %>
+            </div>
+
+            <div class="item">
+              <%= image_tag 'slide2.jpg' %>
+            </div>
+
+            <div class="item">
+              <%= image_tag 'slide3.jpg' %>
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div><!-- End .slider -->
+    </div> <!-- End #main-banner -->
+
+    <div id="saleoff-new">
+      <ul>
+        <li><%= link_to image_tag('iphone5cu.jpg'), root_path %></li>
+        <li><%= link_to image_tag('tragop.jpg'), root_path %></li>
+      </ul>
+    </div><!-- End #sale-new -->
+
+    <div class="smartphone-brand">
+      <div class="title-brand">
+        <span class="top-smartphone-brand"></span>
+        <ul>
+          <li><a href="#">Apple</a></li>
+          <li><a href="#">Samsung</a></li>
+          <li><a href="#">Sony</a></li>
+          <li><a href="#">Asus</a></li>
+        </ul>
+      </div><!-- End .title-brand -->
+
+      <div class="wrap bg-grey bg-h-lg">
+        <article class="products bg-white">
+          <div class="small-label hot-label">Hot</div>
+          <span class="cl-both"></span>
+          <div>
+            <a href="#"><%= image_tag 'products/yoda-fone-yd201.png' %> </a>
+            <h5>Yoda Phone YD 201</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label">New</div>
+        </article>
+
+        <article class="products bg-white">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc-one-m9.png' %></a>
+            <h5>HTC One M9</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+
+        <article class="products bg-white">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc design eye.png' %></a>
+            <h5>HTC Design Eye</h5>
+            <p class="product-price">8.900.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+
+        <article class="products bg-white">
+          <div class="small-label hot-label">Hot</div>
+          <span class="cl-both"></span>
+          <div>
+            <a href="#"><%= image_tag 'products/yoda-fone-yd201.png' %> </a>
+            <h5>Yoda Phone YD 201</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label">New</div>
+        </article>
+
+        <article class="products bg-white">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc-one-m9.png' %></a>
+            <h5>HTC One M9</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+
+        <article class="products bg-white">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc design eye.png' %></a>
+            <h5>HTC Design Eye</h5>
+            <p class="product-price">8.900.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+
+        <article class="products bg-white">
+          <div class="small-label hot-label">Hot</div>
+          <span class="cl-both"></span>
+          <div>
+            <a href="#"><%= image_tag 'products/yoda-fone-yd201.png' %> </a>
+            <h5>Yoda Phone YD 201</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label">New</div>
+        </article>
+
+        <article class="products bg-white">
+          <div class="small-label hot-label">Hot</div>
+          <span class="cl-both"></span>
+          <div>
+            <a href="#"><%= image_tag 'products/yoda-fone-yd201.png' %> </a>
+            <h5>Yoda Phone YD 201</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label">New</div>
+        </article>
+
+        <article class="products bg-white">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc-one-m9.png' %></a>
+            <h5>HTC One M9</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+
+        <article class="products bg-white">
+          <div class="small-label hot-label"></div>
+          <div class="meta-data">
+            <a href="#"><%= image_tag 'products/htc design eye.png' %></a>
+            <h5>HTC Design Eye</h5>
+            <p class="product-price">8.900.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+      </div><!-- End .wrap -->
+    </div> <!-- End .smartphone-brand -->
+
+    <!--<div class="cl-both"></div>-->
+    <div class="other-brand tablet-brand">
+      <div class="title-brand">
+        <span class="top-other-brand"><a href="#">máy tính bảng</a></span>
+        <ul>
+          <li><a href="#">Apple</a></li>
+          <li><a href="#">Samsung</a></li>
+          <li><a href="#">Sony</a></li>
+          <li><a href="#">Asus</a></li>
+        </ul>
+      </div><!-- End .title-brand -->
+
+      <div class="wrap">
+        <article class="products bg-grey">
+          <div class="small-label hot-label">Hot</div>
+          <span class="cl-both"></span>
+          <div>
+            <a href="#"><%= image_tag 'products/yoda-fone-yd201.png' %> </a>
+            <h5>Yoda Phone YD 201</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label">New</div>
+        </article>
+
+        <article class="products bg-grey">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc-one-m9.png' %></a>
+            <h5>HTC One M9</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+
+        <article class="products bg-grey">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc design eye.png' %></a>
+            <h5>HTC Design Eye</h5>
+            <p class="product-price">8.900.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+
+        <article class="products bg-grey">
+          <div class="small-label hot-label">Hot</div>
+          <span class="cl-both"></span>
+          <div>
+            <a href="#"><%= image_tag 'products/yoda-fone-yd201.png' %> </a>
+            <h5>Yoda Phone YD 201</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label">New</div>
+        </article>
+
+        <article class="products bg-grey">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc-one-m9.png' %></a>
+            <h5>HTC One M9</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+      </div><!-- End .wrap -->
+    </div> <!-- End .tablet-brand -->
+
+    <div class="other-brand macbook-brand">
+      <div class="title-brand">
+        <span class="top-other-brand"><a href="#">macbook</a></span>
+        <ul>
+          <li><a href="#">Apple</a></li>
+        </ul>
+      </div><!-- End .title-brand -->
+
+      <div class="wrap">
+        <article class="products bg-grey">
+          <div class="small-label hot-label">Hot</div>
+          <span class="cl-both"></span>
+          <div>
+            <a href="#"><%= image_tag 'products/yoda-fone-yd201.png' %> </a>
+            <h5>Yoda Phone YD 201</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label">New</div>
+        </article>
+
+        <article class="products bg-grey">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc-one-m9.png' %></a>
+            <h5>HTC One M9</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+
+        <article class="products bg-grey">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc design eye.png' %></a>
+            <h5>HTC Design Eye</h5>
+            <p class="product-price">8.900.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+
+        <article class="products bg-grey">
+          <div class="small-label hot-label">Hot</div>
+          <span class="cl-both"></span>
+          <div>
+            <a href="#"><%= image_tag 'products/yoda-fone-yd201.png' %> </a>
+            <h5>Yoda Phone YD 201</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label">New</div>
+        </article>
+
+        <article class="products bg-grey">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc-one-m9.png' %></a>
+            <h5>HTC One M9</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+      </div><!-- End .wrap -->
+    </div> <!-- End .macbook-brand -->
+
+    <div class="other-brand accessories-brand">
+      <div class="title-brand">
+        <span class="top-other-brand"><a href="#">Phụ kiện </a></span>
+        <ul>
+          <li><a href="#">yoobao</a></li>
+          <li><a href="#">mili</a></li>
+          <li><a href="#">jbl</a></li>
+          <li><a href="#">beat</a></li>
+          <li><a href="#">senheiser</a></li>
+          <li><a href="#">pantronics</a></li>
+          <li><a href="#">divoom</a></li>
+        </ul>
+      </div><!-- End .title-brand -->
+
+      <div class="wrap">
+        <article class="products bg-grey">
+          <div class="small-label hot-label">Hot</div>
+          <span class="cl-both"></span>
+          <div>
+            <a href="#"><%= image_tag 'products/yoda-fone-yd201.png' %> </a>
+            <h5>Yoda Phone YD 201</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label">New</div>
+        </article>
+
+        <article class="products bg-grey">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc-one-m9.png' %></a>
+            <h5>HTC One M9</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+
+        <article class="products bg-grey">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc design eye.png' %></a>
+            <h5>HTC Design Eye</h5>
+            <p class="product-price">8.900.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+
+        <article class="products bg-grey">
+          <div class="small-label hot-label">Hot</div>
+          <span class="cl-both"></span>
+          <div>
+            <a href="#"><%= image_tag 'products/yoda-fone-yd201.png' %> </a>
+            <h5>Yoda Phone YD 201</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label">New</div>
+        </article>
+
+        <article class="products bg-grey">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc-one-m9.png' %></a>
+            <h5>HTC One M9</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+      </div><!-- End .wrap -->
+    </div> <!-- End .accessories-brand -->
+
+    <div class="other-brand secondhand-brand">
+      <div class="title-brand">
+        <span class="top-other-brand"><a href="#">Second Hand</a></span>
+        <ul>
+          <li><a href="#">điện thoại</a></li>
+          <li><a href="#">máy tính bảng</a></li>
+          <li><a href="#">laptop</a></li>
+        </ul>
+      </div><!-- End .title-brand -->
+
+      <div class="wrap">
+        <article class="products bg-grey">
+          <div class="small-label hot-label">Hot</div>
+          <span class="cl-both"></span>
+          <div>
+            <a href="#"><%= image_tag 'products/yoda-fone-yd201.png' %> </a>
+            <h5>Yoda Phone YD 201</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label">New</div>
+        </article>
+
+        <article class="products bg-grey">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc-one-m9.png' %></a>
+            <h5>HTC One M9</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+
+        <article class="products bg-grey">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc design eye.png' %></a>
+            <h5>HTC Design Eye</h5>
+            <p class="product-price">8.900.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+
+        <article class="products bg-grey">
+          <div class="small-label hot-label">Hot</div>
+          <span class="cl-both"></span>
+          <div>
+            <a href="#"><%= image_tag 'products/yoda-fone-yd201.png' %> </a>
+            <h5>Yoda Phone YD 201</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label">New</div>
+        </article>
+
+        <article class="products bg-grey">
+          <div class="small-label hot-label"></div>
+          <div>
+            <a href="#"><%= image_tag 'products/htc-one-m9.png' %></a>
+            <h5>HTC One M9</h5>
+            <p class="product-price">5.000.000</p>
+          </div>
+          <div class="small-label new-label"></div>
+        </article>
+      </div><!-- End .wrap -->
+    </div> <!-- End .secondhand-brand -->
+  </div><!-- End #wrapper -->
+  <div id="top-footer">
+      <div class="left-top-footer">
+        <p class="lt-tf">Hotline</p>
+        <p class="bl-tf">(8h30 - 17h30) Tất cả các ngày trong tuần</p>
+      </div>
+      <div class="right-top-footer">
+        <p class="hotline">0936.020.223</p>
+      </div>
+  </div>
+  <div id="main-footer">
+    <div class="col1">
+      <span class="title">Tổng đài CSKH 0936.020.223</span>
+      <ul>
+        <li><a href="#">Row 1</a></li>
+        <li><a href="#">Row 1</a></li>
+        <li><a href="#">Row 1</a></li>
+        <li><a href="#">Row 1</a></li>
+        <li><a href="#">Row 1</a></li>
+      </ul>
+    </div>
+
+    <div class="col2">
+      <span class="title">Tư vấn bán hàng 0936.020.223</span>
+      <ul>
+        <li><a href="#">Row 1</a></li>
+        <li><a href="#">Row 1</a></li>
+        <li><a href="#">Row 1</a></li>
+        <li><a href="#">Row 1</a></li>
+        <li><a href="#">Row 1</a></li>
+      </ul>
+    </div>
+
+    <div class="col3">
+      <span class="title">Chính sách & quy định chung</span>
+      <ul>
+        <li><a href="#">Row 1</a></li>
+        <li><a href="#">Row 1</a></li>
+        <li><a href="#">Row 1</a></li>
+        <li><a href="#">Row 1</a></li>
+        <li><a href="#">Row 1</a></li>
+      </ul>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,511 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.centered {
+    text-align: center;
+}
+
+.cl-both {
+    clear:both;
+}
+
+.small-label {
+    width: 50px;
+    height: 25px;
+}
+
+.hot-label {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.new-label {
+    color: green;
+}
+
+.bg-white {
+    background: white;
+}
+
+.bg-grey {
+    background: #f4f4f4;
+}
+
+.bg-h-lg {
+    height: 550px;
+}
+
+#wrapper {
+    font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    font-size: 13px;
+    width: 100%;
+    min-height: 650px;
+    background: transparent url('bg-header-nav.png') left top repeat-x;
+}
+
+/******   TOP-MENU   *******/
+#top-menu {
+    height: 50px;
+    width: 1200px;
+    margin: 0px auto;
+    color: #c2c0c1;
+    text-align: center;
+    text-transform: uppercase;
+    font: 10px normal Arial, Verdana, sans-serif !important;
+}
+
+#top-menu .left-contact {
+    height: 50px;
+    padding: 5px 10px 0px 25px;
+    float: left;
+    background: transparent url('bg-hotline.png') top left no-repeat;
+}
+
+#top-menu .right-contact {
+    height: 50px;
+    padding: 5px 10px 5px 25px;
+    float: left;
+    margin-left: 10px;
+    background: transparent url('bg-cskh.png') top left no-repeat;
+}
+
+#top-menu ul {
+    margin-left: 20px;
+    height: 50px;
+    float: left;
+}
+
+#top-menu ul li {
+    float: left;
+    margin-left: 15px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    text-align: right;
+}
+
+#top-menu a {
+    color: #c2c0c1;
+    text-decoration: none;
+    font: 10px normal Arial, Verdana, sans-serif !important;
+}
+
+#top-menu a:hover {
+    color: white;
+}
+
+/***** LOGO-SEARCH  ******/
+#logo-search {
+    width: 100%;
+    height: 86px;
+    background: transparent url('bg-logo-search.png') left top repeat-x;
+}
+
+#logo-search .wrap {
+    height: 100%;
+    width: 1000px;
+    margin: 0px auto;
+}
+
+#logo-search .wrap .logo {
+    height: 77px;
+    width: 115px;
+    margin: -10px 20px 0px 20px;
+    float: left;
+}
+
+#logo-search .wrap .search {
+    height: 40px;
+    padding: 10px 10px 10px 0px;
+    float: left;
+    text-align: center;
+}
+
+#logo-search .wrap .search .search-left {
+    height: 32px;
+    display: inline-block;
+}
+
+#logo-search .wrap .search .textbox-search {
+    height: 32px;
+    width: 200px;
+    display: inline-block;
+}
+
+#logo-search .wrap .search .btn-search {
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    background: white url('search-btn.png') no-repeat 0px 5px;
+}
+
+/******  MAIN-MENU    ********/
+#main-menu {
+    width: 100%;
+    height: 42px;
+    background: transparent url('bg-main-nav.png') top left repeat-x;
+}
+
+#main-menu ul {
+    width: 980px;
+    height: 42px;
+    margin: 0 auto; padding: 0;
+}
+
+#main-menu ul li {
+    height: 42px;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 42px;
+    float: left;
+    text-transform: uppercase;
+}
+
+#main-menu ul li a {
+    height: 42px;
+    color: #2E2F30;
+    margin-left: 10px;
+}
+
+#main-menu ul li:hover {
+    background: transparent url('bg-header-nav-hover.png') center bottom -1px no-repeat;
+}
+
+/*******  #MAIN-BANNER   *********/
+#main-banner {
+    width: 100%;
+    height: 317px;
+    margin: 0; padding: 0;
+}
+
+#main-banner .slider {
+    width: 980px;
+    height: 317px;
+    margin: 0px auto;
+    line-height:  300px;
+    text-align: center;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    margin: auto;
+}
+
+
+/*****  #SALE OFF-NEW   ******/
+#saleoff-new {
+    width: 100%;
+    height: 160px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+#saleoff-new ul {
+    width: 1000px;
+    height: 160px;
+    margin: 0px auto;
+}
+
+#saleoff-new ul li {
+    width: 450px;
+    height: 100%;
+    float: left;
+    margin-left: 20px;
+    text-align: center;
+}
+
+/******  .SMARTPHONE-BRAND    *********/
+.smartphone-brand {
+    width: 100%;
+    padding: 0px;
+    clear: both;
+}
+
+.smartphone-brand .title-brand {
+    height: 36px;
+    width: 100%;
+    background: #d3d3d3;
+}
+
+.smartphone-brand .title-brand .top-smartphone-brand {
+    width: 165px;
+    height: 44px;
+    float: left;
+    margin-left: 150px;
+    text-align: center;
+    background: transparent url('smartphone-brand.png');
+}
+
+.smartphone-brand .title-brand ul {
+    width: 835px;
+    height: 36px;
+    margin: 0px auto;
+    float: left;
+}
+
+.smartphone-brand .title-brand ul li a {
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 36px;
+    float: left;
+    color: white;
+    margin-right: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.smartphone-brand .title-brand ul li a:hover {
+    color: #2E2F30;
+    text-decoration: none;
+}
+
+
+/*********  .other-brand   ***********/
+.other-brand {
+    width: 1000px;
+    height: 40px;
+    margin: 0px auto;
+    background: transparent url('bg-other-brand.png') top left repeat-x;
+}
+
+
+.other-brand .title-brand {
+     height: 35px;
+     width: 1000px;
+     margin: 0px auto;
+     padding: 0px;
+}
+
+
+.other-brand .title-brand .top-other-brand {
+    height: 40px;
+    float: left;
+    margin-left: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    background: white;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.top-other-brand a {
+    color: black;
+}
+
+.top-other-brand a:hover {
+    text-decoration: none;
+}
+
+.other-brand .title-brand ul {
+    width: 700px;
+    height: 36px;
+    margin: 0px auto;
+    float: right;
+}
+
+.other-brand .title-brand ul li a {
+    padding: 5px 15px 0px 15px;
+    margin-top: 2px;
+    float: right;
+    margin-right: 10px;
+    color: black;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.other-brand .title-brand ul li a:hover {
+    text-decoration: none;
+    background: black;
+    color: white;
+}
+
+
+.wrap {
+    padding: 10px;
+    margin: 0px auto;
+    width: 1000px;
+    text-align: center;
+}
+
+.wrap article.products {
+    width: 183px;
+    height: 247px;
+    float: left;
+    vertical-align: middle;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    margin: 10px 0px 11px 11px;
+    line-height: 5px;
+}
+
+/******  .tablet-brand    ********/
+.tablet-brand {
+    width: 1000px;
+    margin-top: 10px;
+    padding: 0px;
+    min-height: 297px;
+}
+
+/******  .macbook-brand    ********/
+.macbook-brand {
+    width: 1000px;
+    margin-top: 20px;
+    padding: 0px;
+    min-height: 297px;
+}
+
+/******  .accessories-brand    ********/
+.accessories-brand {
+    width: 1000px;
+    margin-top: 30px;
+    padding: 0px;
+    min-height: 297px;
+}
+
+/******  .secondhand-brand    ********/
+.secondhand-brand {
+    width: 1000px;
+    margin-top: 40px;
+    padding: 0px;
+    min-height: 297px;
+}
+
+/*********  #footer  **********/
+#top-footer {
+    width: 1000px;
+    height: 95px;
+    margin: 50px auto;
+    background: transparent url('bg-top-footer.png') top left repeat-x;
+    text-align: center;
+}
+
+#top-footer .left-top-footer {
+    width: 400px;
+    height: 95px;
+    float: left;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+#top-footer p.lt-tf {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#top-footer p.bl-tf {
+    font-style: italic;
+    color: darkgrey;
+    font-size: 13px;
+}
+
+#top-footer .right-top-footer {
+    width: 250px;
+    height: 95px;
+    float: left;
+    text-align: left;
+    line-height: 95px;
+}
+
+#top-footer .right-top-footer p.hotline {
+    width: 200px;
+    height: 64px;
+    line-height: 64px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 17px;
+    color: red;
+    padding-left: 40px;
+    background: transparent url('icon_phone.png') center left no-repeat;
+    vertical-align: middle;
+}
+
+#main-footer {
+    width: 1000px;
+    min-height: 150px;
+    margin: 0px auto;
+}
+
+.col1, .col2, .col3 {
+    float: left;
+    width: 300px;
+}
+
+.col2 {
+    margin: 0px 15px 0px 15px;
+}
+
+.title {
+    height: 50px;
+    padding: 5px 10px 5px 45px;
+    font-weight: bold;
+}
+
+.col1 .title {
+    background: transparent url('bg-hotline-footer.png') center left no-repeat;
+}
+
+.col2 .title {
+    background: transparent url('bg-cskh.png') center left no-repeat;
+}
+
+.col3 .title {
+    background: transparent url('bg-hdsd.png') center left no-repeat;
+}
+
+#main-footer ul {
+    width: 100%;
+    padding: 10px 10px 10px 50px;
+}
+
+#main-footer ul li {
+    padding-left: 20px;
+    background: transparent url('arrow.png') center left no-repeat;
+}
+
+#main-footer ul li a {
+    color: darkgrey;
+}
