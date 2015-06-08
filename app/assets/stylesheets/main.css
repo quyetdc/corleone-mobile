@@ -81,7 +81,7 @@ table {
     font-size: 13px;
     width: 100%;
     min-height: 650px;
-    background: transparent url('bg-header-nav.png') left top repeat-x;
+    background: url('bg-header-nav.png') left top repeat-x;
 }
 
 /******   TOP-MENU   *******/
@@ -99,7 +99,7 @@ table {
     height: 50px;
     padding: 5px 10px 0px 25px;
     float: left;
-    background: transparent url('bg-hotline.png') top left no-repeat;
+    background: url('bg-hotline.png') top left no-repeat;
 }
 
 #top-menu .right-contact {
@@ -107,7 +107,7 @@ table {
     padding: 5px 10px 5px 25px;
     float: left;
     margin-left: 10px;
-    background: transparent url('bg-cskh.png') top left no-repeat;
+    background: url('bg-cskh.png') top left no-repeat;
 }
 
 #top-menu ul {
