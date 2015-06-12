@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
 
+  resources :distributes
+  resources :distributes
+  resources :categories
+  resources :menus
+  resources :products
+  resources :menus
+  resources :categories
+  resources :distributes
+
   root "index#index"
 
   devise_for :users, controllers: { sessions: 'users/sessions' }

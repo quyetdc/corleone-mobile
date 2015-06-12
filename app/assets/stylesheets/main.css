@@ -69,11 +69,15 @@ table {
 }
 
 .bg-grey {
-    background: #f4f4f4;
+    background: #f4f4f4 !important;
 }
 
 .bg-h-lg {
     height: 550px;
+}
+
+.upper {
+    text-transform: uppercase;
 }
 
 #wrapper {
@@ -87,8 +91,8 @@ table {
 /******   TOP-MENU   *******/
 #top-menu {
     height: 50px;
-    width: 1200px;
     margin: 0px auto;
+    width: 1200px;
     color: #c2c0c1;
     text-align: center;
     text-transform: uppercase;
@@ -97,16 +101,16 @@ table {
 
 #top-menu .left-contact {
     height: 50px;
-    padding: 5px 10px 0px 25px;
+    padding: 5px 5px 0px 25px;
     float: left;
     background: url('bg-hotline.png') top left no-repeat;
 }
 
 #top-menu .right-contact {
     height: 50px;
-    padding: 5px 10px 5px 25px;
+    padding: 5px 5px 5px 30px;
     float: left;
-    margin-left: 10px;
+    margin-left: 5px;
     background: url('bg-cskh.png') top left no-repeat;
 }
 
@@ -121,7 +125,11 @@ table {
     margin-left: 15px;
     line-height: 30px;
     letter-spacing: 0.5px;
-    text-align: right;
+    text-align: left;
+}
+
+#top-menu ul li:hover {
+    border-bottom: 2px solid red;
 }
 
 #top-menu a {
@@ -152,6 +160,7 @@ table {
     width: 115px;
     margin: -10px 20px 0px 20px;
     float: left;
+    display: block;
 }
 
 #logo-search .wrap .search {
@@ -365,7 +374,7 @@ table {
 
 
 .wrap {
-    padding: 10px;
+    padding: 13px;
     margin: 0px auto;
     width: 1000px;
     text-align: center;
@@ -377,9 +386,19 @@ table {
     float: left;
     vertical-align: middle;
     text-align: center;
-    padding: 5px 5px 5px 5px;
-    margin: 10px 0px 11px 11px;
+    padding: 5px;
+    margin: 10px 5px 5px 5px;
     line-height: 5px;
+    background: white;
+}
+
+.wrap article.products img {
+    max-width: 105px;
+    max-height: 142px;
+}
+
+.wrap article.products:hover {
+    box-shadow: 0px 0px 10px 2px darkgrey inset;
 }
 
 /******  .tablet-brand    ********/

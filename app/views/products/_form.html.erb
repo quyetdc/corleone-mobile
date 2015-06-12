@@ -1,0 +1,157 @@
+<%= form_for @product, :html => { :class => "form-horizontal", :style => "margin-top: 30px; margin-bottom: 30px;" } do |f| %>
+
+    <% if @product.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @product.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+    <div class="control-group">
+      <h4>Category</h4>
+      <% Category.all.each do |category| %>
+      <%= f.label category.name, :class => 'control-label' %>
+        <%= f.radio_button :categories_id, category.id %>
+      <% end %>
+      <%= error_span(@product[:categories_id]) %>
+    </div>
+
+    <hr>
+
+    <div class="control-group">
+      <h4>Điện thoại</h4>
+      <% Distribute.all.where(category_id: 1).each do |distribute| %>
+          <%= f.label distribute.name, :class => 'control-label' %>
+            <%= f.radio_button :distribute_id, distribute.id %>
+      <% end %>
+      <%= error_span(@product[:distribute_id]) %>
+    </div>
+
+    <hr>
+
+    <div class="control-group">
+      <h4>Máy tính bảng</h4>
+      <% Distribute.all.where(category_id: 2).each do |distribute| %>
+          <%= f.label distribute.name, :class => 'control-label' %>
+          <%= f.radio_button :distribute_id, distribute.id %>
+      <% end %>
+      <%= error_span(@product[:distribute_id]) %>
+    </div>
+
+    <hr>
+
+    <div class="control-group">
+      <h4>Macbook</h4>
+      <% Distribute.all.where(category_id: 3).each do |distribute| %>
+          <%= f.label distribute.name, :class => 'control-label' %>
+          <%= f.radio_button :distribute_id, distribute.id %>
+      <% end %>
+      <%= error_span(@product[:distribute_id]) %>
+    </div>
+
+    <hr>
+
+    <div class="control-group">
+      <h4>Phụ kiện</h4>
+      <% Distribute.all.where(category_id: 5).each do |distribute| %>
+          <%= f.label distribute.name, :class => 'control-label' %>
+          <%= f.radio_button :distribute_id, distribute.id %>
+      <% end %>
+      <%= error_span(@product[:distribute_id]) %>
+    </div>
+
+    <hr>
+
+  <div class="control-group">
+    <%= f.label 'Mã sản phẩm', :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :masp, :class => 'form-control' %>
+    </div>
+    <%= error_span(@product[:masp]) %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label 'Tên sản phẩm', :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tensp, :class => 'form-control' %>
+    </div>
+    <%= error_span(@product[:tensp]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label 'Số lượng', :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :soluong, :class => 'form-control' %>
+    </div>
+    <%= error_span(@product[:soluong]) %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label 'Giá bán', :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :giaban, :class => 'form-control' %>
+    </div>
+    <%= error_span(@product[:giaban]) %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label 'Mô tả ngắn', :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :short_description, :class => 'form-control' %>
+    </div>
+    <%= error_span(@product[:short_description]) %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label 'Mô tả chi tiết', :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :long_description, :class => 'form-control' %>
+    </div>
+    <%= error_span(@product[:long_description]) %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label 'Hình ảnh sản phẩm', :class => 'control-label' %>
+    <div class="controls">
+      <%= f.file_field :image, :class => 'form-control' %>
+    </div>
+    <%= error_span(@product[:image_file_name]) %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label 'Xuất xứ', :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :xuatxu, :class => 'form-control' %>
+    </div>
+    <%= error_span(@product[:xuatxu]) %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label 'Giá khuyến mại', :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :gia_khuyenmai, :class => 'form-control' %>
+    </div>
+    <%= error_span(@product[:gia_khuyenmai]) %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label 'View', :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :view, :class => 'form-control' %>
+    </div>
+    <%= error_span(@product[:view]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            products_path, :class => 'btn btn-default' %>
+
+<% end %>

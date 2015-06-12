@@ -11,7 +11,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150608090532) do
+ActiveRecord::Schema.define(version: 20150611080451) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.string   "path"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories_distributes", id: false, force: :cascade do |t|
+    t.integer "category_id"
+    t.integer "distribute_id"
+  end
+
+  create_table "categories_products", id: false, force: :cascade do |t|
+    t.integer "category_id"
+    t.integer "product_id"
+  end
+
+  create_table "distributes", force: :cascade do |t|
+    t.string   "name"
+    t.string   "path"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "category_id"
+  end
+
+  add_index "distributes", ["category_id"], name: "index_distributes_on_category_id"
+
+  create_table "menus", force: :cascade do |t|
+    t.string   "name"
+    t.string   "path"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "masp"
+    t.string   "tensp"
+    t.integer  "soluong"
+    t.integer  "giaban"
+    t.string   "short_description"
+    t.string   "long_description"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "xuatxu"
+    t.string   "gia_khuyenmai"
+    t.integer  "view"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "distribute_id"
+    t.integer  "categories_id"
+  end
+
+  add_index "products", ["categories_id"], name: "index_products_on_categories_id"
+  add_index "products", ["distribute_id"], name: "index_products_on_distribute_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

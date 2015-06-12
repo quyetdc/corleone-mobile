@@ -11,9 +11,94 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
+
 <body>
+<div id="wrapper">
+  <div id="top-menu">
+    <div class="wrap">
+        <span class="left-contact col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          tư vấn bán hàng
+          <p>0936.020.223</p>
+        </span>
+
+        <span class="right-contact col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          tổng đài CSKH
+          <p>0936.020.223</p>
+        </span>
+
+      <ul class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+        <% Menu.all.each do |menu| %>
+            <li><%= link_to menu.name, menu.path %></li>
+        <% end %>
+        <li style="margin-left: 30px;">
+          <% if current_user %>
+              <%= current_user.email %>. <%= link_to 'Sign out', destroy_user_session_path, { method: "delete" } %>
+          <% else %>
+              <%= link_to 'đăng nhập/ đăng ký', user_session_path %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div><!-- End #top-menu -->
+
+  <div id="logo-search">
+    <div class="wrap">
+      <div class="logo"><%= link_to image_tag('logo.png') %></div>
+    </div>
+
+  </div> <!-- End #logo-search -->
+
+  <div id="main-menu">
+    <ul>
+      <% Category.all.each do |cat| %>
+          <li><%= link_to cat.name, cat.path %></li>
+      <% end %>
+    </ul>
+  </div> <!-- End #main-menu -->
 
 <%= yield %>
 
+  <div id="top-footer">
+    <div class="left-top-footer">
+      <p class="lt-tf">Hotline</p>
+      <p class="bl-tf">(8h30 - 17h30) Tất cả các ngày trong tuần</p>
+    </div>
+    <div class="right-top-footer">
+      <p class="hotline">0936.020.223</p>
+    </div>
+  </div>
+  <div id="main-footer">
+    <div class="col1 upper">
+      <span class="title">Tổng đài CSKH 0936.020.223</span>
+      <ul>
+        <li><a href="#">LIÊN HỆ VỚI CHÚNG TÔI</a>
+          <p>0936.020.223</p></li>
+        <li><a href="#">Quy định bảo hành, đổi trả</a></li>
+        <li><a href="#">Câu hỏi thường gặp</a></li>
+        <li><a href="#">Bảo hành <span style="font-weight: bold;color:red;">care+</span> thêm an tâm</a></li>
+      </ul>
+    </div>
+
+    <div class="col2 upper">
+      <span class="title">Tư vấn bán hàng 0936.020.223</span>
+      <ul>
+        <li><a href="#">Đặt hàng nhanh, tiện lợi</a></li>
+        <li><a href="#">Ưu đãi khách hàng doanh nghiệp</a></li>
+        <li><a href="#">Chính sách trả góp</a></li>
+      </ul>
+    </div>
+
+    <div class="col3">
+      <span class="title">Chính sách & quy định chung</span>
+      <ul>
+        <li><a href="#">Hình thức thanh toán</a></li>
+        <li><a href="#">Chính sách đổi trả, bảo hành</a></li>
+        <li><a href="#">Chính sách, quy trình xử lý khiếu </a></li>
+        <li><a href="#">Chính sách vận chuyển, giao hàng</a></li>
+      </ul>
+    </div>
+  </div> <!-- End .main-footer -->
+
+ </div><!-- End #wrapper -->
 </body>
 </html>
