@@ -74,7 +74,11 @@
     <!--<div class="cl-both"></div>-->
     <div class="other-brand tablet-brand">
       <div class="title-brand">
-        <span class="top-other-brand"><a href="#">máy tính bảng</a></span>
+        <span class="top-other-brand">
+          <% Category.all.where(id: 2).each do |cat| %>
+            <%= link_to cat.name %>
+          <% end %>
+        </span>
         <ul>
           <% Distribute.all.where(category_id: 2).each do |distribute| %>
             <li><%= link_to distribute.name, distribute.path %></li>
@@ -102,7 +106,11 @@
 
     <div class="other-brand macbook-brand">
       <div class="title-brand">
-        <span class="top-other-brand"><a href="#">macbook</a></span>
+        <span class="top-other-brand">
+          <% Category.all.where(id: 3).each do |cat| %>
+            <%= link_to cat.name %>
+          <% end %>
+        </span>
         <ul>
           <% Distribute.all.where(category_id: 3).each do |distribute| %>
               <li><%= link_to distribute.name, distribute.path %></li>
@@ -130,16 +138,20 @@
 
     <div class="other-brand accessories-brand">
       <div class="title-brand">
-        <span class="top-other-brand"><a href="#">Phụ kiện </a></span>
+        <span class="top-other-brand">
+          <% Category.all.where(id: 4).each do |cat| %>
+            <%= link_to cat.name %>
+          <% end %>
+        </span>
         <ul>
-          <% Distribute.all.where(category_id: 5).each do |distribute| %>
+          <% Distribute.all.where(category_id: 4).each do |distribute| %>
               <li><%= link_to distribute.name, distribute.path %></li>
           <% end %>
         </ul>
       </div><!-- End .title-brand -->
 
       <div class="wrap">
-        <% Product.all.where(categories_id: 5).limit(5).each do |p| %>
+        <% Product.all.where(categories_id: 4).limit(5).each do |p| %>
             <article class="products bg-grey">
               <div class="small-label hot-label">Hot</div>
               <span class="cl-both"></span>
@@ -158,7 +170,11 @@
 
     <div class="other-brand secondhand-brand">
       <div class="title-brand">
-        <span class="top-other-brand"><a href="#">Second Hand</a></span>
+        <span class="top-other-brand">
+          <% Category.all.where(id: 5).each do |cat| %>
+            <%= link_to cat.name %>
+          <% end %>
+        </span>
         <ul>
           <% Category.all.limit(3).each do |cat| %>
             <li><%= link_to cat.name, root_path %></li>
@@ -167,7 +183,7 @@
       </div><!-- End .title-brand -->
 
       <div class="wrap">
-        <% Product.all.where(categories_id: 4).limit(5).order(view: :desc).each do |p| %>
+        <% Product.all.where(categories_id: 5).limit(5).order(view: :desc).each do |p| %>
         <article class="products bg-grey">
           <div class="small-label hot-label">Hot</div>
           <span class="cl-both"></span>
@@ -180,8 +196,6 @@
           </div>
           <div class="small-label new-label">New</div>
         </article>
-            <% end %>
-
-
+        <% end %>
       </div><!-- End .wrap -->
     </div> <!-- End .secondhand-brand -->

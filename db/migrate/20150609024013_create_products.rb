@@ -13,7 +13,7 @@ class CreateProducts < ActiveRecord::Migration
       t.integer :view
       t.integer :distribute_id
       t.integer :categories_id
-      
+
       t.timestamps null: false
     end
   end
