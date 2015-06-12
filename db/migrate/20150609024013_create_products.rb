@@ -11,9 +11,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :xuatxu
       t.string :gia_khuyenmai
       t.integer :view
-      t.integer :distribute_id
-      t.integer :category_id
-      
+
       t.timestamps null: false
     end
   end
