@@ -65,7 +65,7 @@ table {
 }
 
 .bg-white {
-    background: white;
+    background: white !important;
 }
 
 .bg-grey {
@@ -398,7 +398,7 @@ table {
 }
 
 .wrap article.products:hover {
-    box-shadow: 0px 0px 10px 2px darkgrey inset;
+    box-shadow: 0px 0px 10px 2px darkgrey inset !important;
 }
 
 /******  .tablet-brand    ********/
