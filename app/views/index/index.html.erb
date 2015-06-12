@@ -47,7 +47,7 @@
       <div class="title-brand">
         <span class="top-smartphone-brand"></span>
         <ul>
-          <% Distribute.all.where(category_id: 1).limit(5).each do |distribute| %>
+          <% Distribute.all.where(category_id: 1).limit(7).each do |distribute| %>
             <li><%= link_to distribute.name, distribute.path %></li>
           <% end %>
         </ul>
