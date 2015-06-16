@@ -7,7 +7,6 @@ class CreateProducts < ActiveRecord::Migration
       t.integer :giaban
       t.string :short_description
       t.string :long_description
-      t.attachment :image
       t.string :xuatxu
       t.string :gia_khuyenmai
       t.integer :view

@@ -59,7 +59,7 @@
               <div class="small-label"></div>
               <span class="cl-both"></span>
               <div>
-                <%= link_to image_tag(p.image.url(:thumb)),
+                <%= link_to image_tag(p.image_url(:thumbnail)),
                             {controller: 'products', action: 'show', id: p.id},
                             { } %>
                 <h5><%= link_to p.tensp, { controller: 'products', action: 'show', id: p.id } %> <%= p.masp %></h5>
@@ -92,7 +92,7 @@
               <div class="small-label hot-label">Hot</div>
               <span class="cl-both"></span>
               <div>
-                <%= link_to image_tag(p.image.url(:thumb)),
+                <%= link_to image_tag(p.image_url(:thumbnail)),
                             {controller: 'products', action: 'show', id: p.id},
                             { } %>
                 <h5><%= link_to p.tensp, { controller: 'products', action: 'show', id: p.id } %> <%= p.masp %></h5>
@@ -124,7 +124,7 @@
               <div class="small-label hot-label">Hot</div>
               <span class="cl-both"></span>
               <div>
-                <%= link_to image_tag(p.image.url(:thumb)),
+                <%= link_to image_tag(p.image_url(:thumbnail)),
                             {controller: 'products', action: 'show', id: p.id},
                             { } %>
                 <h5><%= link_to p.tensp, { controller: 'products', action: 'show', id: p.id } %> <%= p.masp %></h5>
@@ -156,7 +156,7 @@
               <div class="small-label hot-label">Hot</div>
               <span class="cl-both"></span>
               <div>
-                <%= link_to image_tag(p.image.url(:thumb)),
+                <%= link_to image_tag(p.image_url(:thumbnail)),
                             {controller: 'products', action: 'show', id: p.id},
                             { } %>
                 <h5><%= link_to p.tensp, { controller: 'products', action: 'show', id: p.id } %> <%= p.masp %></h5>
@@ -188,9 +188,9 @@
           <div class="small-label hot-label">Hot</div>
           <span class="cl-both"></span>
           <div>
-            <%= link_to image_tag(p.image.url(:thumb)),
-                            {controller: 'products', action: 'show', id: p.id},
-                            { } %>
+            <%= link_to image_tag(p.image_url(:thumbnail)),
+                        {controller: 'products', action: 'show', id: p.id},
+                        { } %>
             <h5><%= link_to p.tensp, { controller: 'products', action: 'show', id: p.id } %> <%= p.masp %></h5>
             <p class="product-price"><%= p.giaban %></p>
           </div>

@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
 
-gem 'paperclip'
+gem 'cloudinary'
+gem 'carrierwave'
+gem 'rmagick'
 gem 'devise'
 gem 'twitter-bootstrap-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
