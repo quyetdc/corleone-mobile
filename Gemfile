@@ -1,11 +1,16 @@
 source 'https://rubygems.org'
 
+# Authenticate user
+gem 'cancan'
+gem 'devise'
 
-gem 'cloudinary'
+#Upload image
 gem 'carrierwave'
 gem 'rmagick'
-gem 'devise'
+
+#Twitter Bootstrap
 gem 'twitter-bootstrap-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
