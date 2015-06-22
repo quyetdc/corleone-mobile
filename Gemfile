@@ -4,6 +4,9 @@ source 'https://rubygems.org'
 gem 'cancan'
 gem 'devise'
 
+# Content Manager
+gem 'activeadmin', github: 'activeadmin'
+
 #Upload image
 gem 'carrierwave'
 gem 'rmagick'

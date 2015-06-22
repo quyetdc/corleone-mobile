@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   load_and_authorize_resource
-  skip_authorize_resource only: [:new, :show]
+  skip_authorize_resource only: [:show]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
